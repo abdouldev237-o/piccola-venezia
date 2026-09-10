@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-<title>Piccola Venezia | Restaurant italien à Douala</title>
+
   <head>
+  <title>Piccola Venezia | Restaurant italien à Douala</title>  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#751F2A" />
@@ -999,12 +1000,20 @@
         },
 
         isRestaurantOpen() {
-          // Listing hours provided in the source are 11:30–22:30 each day.
-          const hour = new Date().getHours();
-          const minute = new Date().getMinutes();
-          const value = hour * 60 + minute;
-          return value >= 690 && value < 1350;
-        }
+  const now = new Date();
+  const value = now.getHours() * 60 + now.getMinutes();
+
+  const lunchStart = 12 * 60;
+  const lunchEnd = 14 * 60 + 30;
+
+  const dinnerStart = 18 * 60 + 30;
+  const dinnerEnd = 23 * 60;
+
+  return (
+    (value >= lunchStart && value < lunchEnd) ||
+    (value >= dinnerStart && value < dinnerEnd)
+  );
+},
       };
     }
   </script>
