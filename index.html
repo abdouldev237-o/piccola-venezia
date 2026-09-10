@@ -153,9 +153,13 @@
           <button @click="navigate('reservation')" class="hidden bg-burgundy px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.17em] transition hover:bg-deepburgundy sm:inline-flex">
             Réserver une table
           </button>
-          <button class="icon-btn focus-ring inline-flex h-11 w-11 items-center justify-center border border-ivory/20 lg:hidden" :aria-expanded="mobileMenuOpen" aria-label="Toggle navigation menu"
-          class="icon-btn focus-ring inline-flex h-11 w-11 items-center justify-center border lg:hidden transition-colors duration-300"
-            :class="scrolled ? 'border-ink/15 text-ink' : 'border-ivory/20 text-ivory' ;mobileMenuOpen = !mobileMenuOpen">
+          <button
+  @click="mobileMenuOpen = !mobileMenuOpen"
+  :aria-expanded="mobileMenuOpen"
+  aria-label="Toggle navigation menu"
+  class="icon-btn focus-ring inline-flex h-11 w-11 items-center justify-center border lg:hidden transition-colors duration-300"
+  :class="scrolled ? 'border-ink/15 text-gray-500' : 'border-ivory text-gray-500'"
+>
             <span class="sr-only">Menu</span>
             <svg x-show="!mobileMenuOpen" x-cloak width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
             <svg x-show="mobileMenuOpen" x-cloak width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
