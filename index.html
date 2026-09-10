@@ -8,11 +8,11 @@
   <meta name="theme-color" content="#751F2A" />
   <meta name="robots" content="index, follow" />
   <meta name="description" content="Découvrez Piccola Venezia à Douala : cuisine italienne, atmosphère élégante, galerie et réservation de table directement via WhatsApp." />
-  <link rel="canonical" href="index.html" />
+  <link rel="canonical" href="https://piccola-venezia.vercel.app/" />
   <meta property="og:type" content="restaurant" />
   <meta property="og:title" content="Piccola Venezia | Italienne Restaurant in Douala" />
   <meta property="og:description" content="Authentic Italienne flavors, timeless recipes and a refined dining atmosphere inspired by the charm of Venice." />
-  <meta property="og:url" content="index.html" />
+  <meta property="og:url" content="ihttps://piccola-venezia.vercel.app/" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=85" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Piccola Venezia | Italienne Restaurant in Douala" />
@@ -541,7 +541,7 @@
                 <label for="res-guests" class="text-[10px] font-semibold uppercase tracking-[0.16em]">Nombre de personnes <span class="text-burgundy">*</span></label>
                 <select id="res-guests" x-model="reservation.guests" class="focus-ring mt-3 w-full border-0 border-b border-ink/18 bg-transparent px-0 py-3 text-base outline-none focus:border-burgundy">
                   <template x-for="n in 14" :key="n">
-                    <option :value="n" x-text="n + (n === 1 ? ' guest' : ' guests')"></option>
+                    <option :value="n" x-text="n + (n === 1 ? ' personne' : ' personnes')"></option>
                   </template>
                 </select>
                 <p x-show="reservationErrors.guests" x-text="reservationErrors.guests" x-cloak class="mt-2 text-xs text-burgundy"></p>
