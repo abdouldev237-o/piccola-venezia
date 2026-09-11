@@ -10,13 +10,13 @@
   <meta name="description" content="Découvrez Piccola Venezia à Douala : cuisine italienne, atmosphère élégante, galerie et réservation de table directement via WhatsApp." />
   <link rel="canonical" href="https://piccola-venezia.vercel.app/" />
   <meta property="og:type" content="restaurant" />
-  <meta property="og:title" content="Piccola Venezia | Italienne Restaurant in Douala" />
-  <meta property="og:description" content="Authentic Italienne flavors, timeless recipes and a refined dining atmosphere inspired by the charm of Venice." />
+  <meta property="og:title" content="Piccola Venezia | Restaurant italien à Douala" />
+  <meta property="og:description" content="Saveurs italiennes authentiques, recettes intemporelles et atmosphère raffinée inspirée du charme de Venise." />
   <meta property="og:url" content="ihttps://piccola-venezia.vercel.app/" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=85" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Piccola Venezia | Italienne Restaurant in Douala" />
-  <meta name="twitter:description" content="Italienne dining in Douala, Cameroun." />
+  <meta name="twitter:title" content="Piccola Venezia | Restaurant italien à Douala" />
+  <meta name="twitter:description" content="Cuisine italienne à Douala, Cameroun." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=85" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23751F2A'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-size='32' fill='%23F6F1E8'%3EPV%3C/text%3E%3C/svg%3E" />
 
@@ -60,8 +60,8 @@
     "name":"Piccola Venezia Restaurant",
     "telephone":"+237699931721",
     "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"Rue 1 239 Alias Rue Toyota",
+      "@type":"PostalAdresse",
+      "streetAdresse":"Rue 1 239 Alias Rue Toyota",
       "addressLocality":"Douala",
       "addressRegion":"Littoral",
       "addressCountry":"CM"
@@ -71,7 +71,7 @@
       "latitude":4.025449752807617,
       "longitude":9.702556610107422
     },
-    "servesCuisine":"Italienne",
+    "servesCuisine":"Cuisine italienne",
     "aggregateRating":{
       "@type":"AggregateRating",
       "ratingValue":"4.3",
@@ -127,7 +127,7 @@
     class="transition-all duration-300 ease-out">
     <div class="mx-auto max-w-[1440px] px-5 sm:px-7 lg:px-10">
       <div class="flex h-[76px] items-center justify-between">
-        <button @click="navigate('home')" class="focus-ring text-left leading-none" aria-label="Go to Piccola Venezia home">
+        <button @click="navigate('home')" class="focus-ring text-left leading-none" aria-label="Touser à l'accueil de Piccola Venezia">
           <span class="block font-display text-[25px] font-semibold tracking-[0.16em] transition-colors duration-300"
             :class="scrolled ? 'text-burgundy' : 'text-gray-400'">PICCOLA</span>
           <span class="block font-display text-[25px] font-semibold tracking-[0.28em] transition-colors duration-300"
@@ -157,7 +157,7 @@
           <button
   @click="mobileMenuOpen = !mobileMenuOpen"
   :aria-expanded="mobileMenuOpen"
-  aria-label="Toggle navigation menu"
+  aria-label="Ouvrir ou fermer le menu de navigation"
   class="icon-btn focus-ring inline-flex h-11 w-11 items-center justify-center border lg:hidden transition-colors duration-300"
   :class="scrolled ? 'border-ink/15 text-gray-500' : 'border-ivory text-gray-500'"
 >
@@ -169,7 +169,7 @@
       </div>
     </div>
 
-    <!-- Mobile menu -->
+    <!-- Menu mobile -->
     <div x-show="mobileMenuOpen" x-cloak x-transition.opacity
       class="border-t lg:hidden"
       :class="scrolled ? 'border-ink/10 bg-ivory text-ink' : 'border-white/10 bg-charcoal text-ivory'">
@@ -187,7 +187,7 @@
           </template>
         </div>
         <div class="mt-7 grid grid-cols-2 gap-3">
-          <a :href="'tel:' + restaurant.phone" class="flex items-center justify-center border border-ivory/20 py-3 text-[10px] font-semibold uppercase tracking-[0.16em]">Appeler Restaurant</a>
+          <a :href="'tel:' + restaurant.phone" class="flex items-center justify-center border border-ivory/20 py-3 text-[10px] font-semibold uppercase tracking-[0.16em]">Appeler le restaurant</a>
           <button @click="navigate('reservation'); mobileMenuOpen=false" class="bg-burgundy py-3 text-[10px] font-semibold uppercase tracking-[0.16em]">Réserver</button>
         </div>
       </nav>
@@ -195,12 +195,12 @@
   </header>
 
   <!-- App Views -->
-  <main class="min-h-screen pt-[76px]">
+  <plats-principaux class="min-h-screen pt-[76px]">
     <!-- HOME -->
     <section x-show="activePage === 'home'" x-transition.opacity.duration.300ms x-cloak>
       <!-- Hero -->
       <section class="hero relative isolate min-h-[calc(90vh-76px)] overflow-hidden bg-charcoal text-ivory">
-        <img class="hero-img absolute inset-0 h-full w-full object-cover" src="static/img/20160605-202258-largejpg.jpg" alt="Italienne restaurant dining room placeholder image" fetchpriority="high" />
+        <img class="hero-img absolute inset-0 h-full w-full object-cover" src="static/img/20160605-202258-largejpg.jpg" alt="Image de démonstration de la salle du restaurant italien" fetchpriority="high" />
         <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(23,23,21,.87)_0%,rgba(23,23,21,.60)_45%,rgba(23,23,21,.30)_100%)]"></div>
         <div class="noise absolute inset-0 pointer-events-none"></div>
 
@@ -212,7 +212,7 @@
               <span class="text-ivory/82">au cœur de Douala</span>
             </h1>
             <p class="mt-7 max-w-xl text-sm leading-7 text-ivory/72 sm:text-base">
-              Authentic Italienne flavors, timeless recipes and a refined dining atmosphere inspired by the charm of Venice.
+              Saveurs italiennes authentiques, recettes intemporelles et atmosphère raffinée inspirée du charme de Venise.
             </p>
             <div class="mt-9 flex flex-col gap-3 sm:flex-row">
               <button @click="navigate('reservation')" class="bg-burgundy px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.19em] transition hover:-translate-y-0.5 hover:bg-deepburgundy">Réserver une table</button>
@@ -232,12 +232,12 @@
               <div class="mt-1 text-[9px] uppercase tracking-[0.16em] text-ivory/55">Cuisine</div>
             </div>
             <div class="hidden px-4 py-4 md:block md:pl-6">
-              <div class="font-display text-2xl">12:00 – 14:30, 18:30 - 23:00</div>
-              <div class="mt-1 text-[9px] uppercase tracking-[0.16em] text-ivory/55">Available listing hours</div>
+              <div class="font-display text-2xl">12:00 – 14:30, 18:30 – 23:00</div>
+              <div class="mt-1 text-[9px] uppercase tracking-[0.16em] text-ivory/55">Horaires indiqués</div>
             </div>
             <div class="hidden px-4 py-4 md:block md:pl-6">
               <div class="font-display text-2xl">Douala</div>
-              <div class="mt-1 text-[9px] uppercase tracking-[0.16em] text-ivory/55">Cameroon</div>
+              <div class="mt-1 text-[9px] uppercase tracking-[0.16em] text-ivory/55">Cameroun</div>
             </div>
           </div>
         </div>
@@ -248,15 +248,15 @@
         <div class="mx-auto grid max-w-[1440px] gap-14 px-5 sm:px-7 lg:grid-cols-[.85fr_1.15fr] lg:items-center lg:px-10">
           <div class="lg:pr-16">
             <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">01 — L'EXPÉRIENCE</p>
-            <h2 class="mt-5 max-w-lg font-display text-5xl leading-[.93] sm:text-6xl lg:text-7xl">Italienne tradition,<br /><span class="text-burgundy">served with soul.</span></h2>
+            <h2 class="mt-5 max-w-lg font-display text-5xl leading-[.93] sm:text-6xl lg:text-7xl">Tradition italienne,<br /><span class="text-burgundy">servie avec passion.</span></h2>
             <p class="mt-7 max-w-xl text-sm leading-7 text-muted">
-              Piccola Venezia brings the spirit of Italienne cuisine to Douala, combining authentic flavors with a warm and elegant dining atmosphere.
+              Piccola Venezia apporte l'esprit de la cuisine italienne à Douala, en associant des saveurs authentiques à une atmosphère chaleureuse et élégante.
             </p>
             <button @click="navigate('story')" class="underline-link mt-8 text-[10px] font-semibold uppercase tracking-[0.2em] text-burgundy">Découvrir notre histoire</button>
           </div>
           <div class="relative">
             <div class="aspect-[4/5] overflow-hidden">
-              <img class="h-full w-full object-cover transition duration-700 hover:scale-[1.025]" src="static/img/photo7jpg.jpg" alt="Italienne pasta placeholder image" loading="lazy" />
+              <img class="h-full w-full object-cover transition duration-700 hover:scale-[1.025]" src="static/img/photo7jpg.jpg" alt="Image de démonstration de pâtes italiennes" loading="lazy" />
             </div>
             <div class="absolute -bottom-7 -left-3 max-w-[245px] border border-burgundy/20 bg-ivory p-5 shadow-editorial sm:-left-7">
               <div class="font-display text-2xl leading-none">Sapori d'Italia</div>
@@ -279,7 +279,7 @@
           <div class="mt-16 grid border-y border-white/12 sm:grid-cols-3">
             <article class="border-b border-white/12 py-7 sm:border-b-0 sm:border-r sm:px-7 sm:first:pl-0">
               <span class="font-display text-3xl text-gold">01</span>
-              <h3 class="mt-4 font-display text-3xl">Authentic Italienne Flavors</h3>
+              <h3 class="mt-4 font-display text-3xl">Saveurs italiennes authentiques</h3>
             </article>
             <article class="border-b border-white/12 py-7 sm:border-b-0 sm:border-r sm:px-7">
               <span class="font-display text-3xl text-gold">02</span>
@@ -313,10 +313,10 @@
                 <div class="flex flex-col justify-center border-b border-burgundy/15 pb-6">
                   <div class="flex items-start justify-between gap-5">
                     <h3 class="font-display text-3xl leading-tight" x-text="item.name"></h3>
-                    <span x-show="item.popular" x-cloak class="shrink-0 text-[9px] font-semibold uppercase tracking-[0.13em] text-burgundy">Popular</span>
+                    <span x-show="item.popular" x-cloak class="shrink-0 text-[9px] font-semibold uppercase tracking-[0.13em] text-burgundy">Populaire</span>
                   </div>
                   <p class="mt-2 text-sm leading-6 text-muted" x-text="item.description"></p>
-                  <div class="mt-4 text-[9px] uppercase tracking-[0.14em] text-gold">SAMPLE ITEM · VERIFY MENU & PRICE</div>
+                  <div class="mt-4 text-[9px] uppercase tracking-[0.14em] text-gold">ARTICLE DE DÉMONSTRATION · VÉRIFIER LA CARTE ET LES PRIX</div>
                 </div>
               </article>
             </template>
@@ -332,7 +332,7 @@
               <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">04 — La Galerie</p>
               <h2 class="mt-4 font-display text-6xl leading-none sm:text-7xl">Un aperçu de l'ambiance.</h2>
             </div>
-            <button @click="navigate('gallery')" class="hidden underline-link text-[10px] font-semibold uppercase tracking-[0.2em] text-burgundy sm:block">View full gallery</button>
+            <button @click="navigate('gallery')" class="hidden underline-link text-[10px] font-semibold uppercase tracking-[0.2em] text-burgundy sm:block">Voir toute la galerie</button>
           </div>
           <div class="mt-10 grid auto-rows-[170px] grid-cols-2 gap-3 sm:auto-rows-[220px] lg:grid-cols-4 lg:auto-rows-[250px]">
             <button @click="openGalerie(0)" class="group col-span-2 row-span-2 overflow-hidden text-left">
@@ -348,7 +348,7 @@
               <img :src="galleryImages[3].src" :alt="galleryImages[3].alt" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
             </button>
           </div>
-          <button @click="navigate('gallery')" class="mt-7 underline-link text-[10px] font-semibold uppercase tracking-[0.2em] text-burgundy sm:hidden">View full gallery</button>
+          <button @click="navigate('gallery')" class="mt-7 underline-link text-[10px] font-semibold uppercase tracking-[0.2em] text-burgundy sm:hidden">Voir toute la galerie</button>
         </div>
       </section>
 
@@ -358,10 +358,10 @@
           <div>
             <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">05 — AVIS DE NOS CLIENTS</p>
             <div class="mt-6 font-display text-6xl leading-none">4.3<span class="text-2xl text-muted"> / 5</span></div>
-            <p class="mt-2 text-[10px] uppercase tracking-[0.15em] text-muted">82 Tripadvisor Avis</p>
+            <p class="mt-2 text-[10px] uppercase tracking-[0.15em] text-muted">82 avis Tripadvisor</p>
           </div>
           <figure class="border-t border-burgundy/20 pt-7 lg:pt-10">
-            <blockquote class="max-w-4xl font-display text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">“It was so good experience for Italienne food. Quiet and classical atmosphere with good wine. And kind owner...”</blockquote>
+            <blockquote class="max-w-4xl font-display text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">« C'était une très belle expérience autour de la cuisine italienne. Une atmosphère calme et classique, avec un bon vin. Et un propriétaire très sympathique… »</blockquote>
             <figcaption class="mt-8 text-[10px] font-semibold uppercase tracking-[0.17em] text-burgundy">Kevin K. · Tripadvisor</figcaption>
           </figure>
         </div>
@@ -373,7 +373,7 @@
           <div class="px-5 py-24 sm:px-7 lg:px-10 lg:py-28">
             <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">06 — NOUS TROUVER</p>
             <h2 class="mt-5 max-w-lg font-display text-6xl leading-[.9] sm:text-7xl">Trouvez votre chemin<br /><span class="text-burgundy">vers Piccola Venezia</span></h2>
-            <p class="mt-7 text-sm leading-7 text-muted">Rue 1 239 Alias Rue Toyota<br />Douala, Littoral, Cameroon</p>
+            <p class="mt-7 text-sm leading-7 text-muted">Rue 1 239 Alias Rue Toyota<br />Douala, Littoral, Cameroun</p>
             <p class="mt-4 text-[10px] uppercase tracking-[0.16em] text-muted">Plus Code · <span class="font-semibold text-ink">2PG3+52M</span></p>
             <div class="mt-8 flex flex-wrap gap-3">
               <a :href="mapsUrl" target="_blank" rel="noopener" class="bg-burgundy px-6 py-3 text-[10px] font-semibold uppercase tracking-[0.17em] text-white transition hover:bg-deepburgundy">Itinéraire</a>
@@ -381,7 +381,7 @@
             </div>
           </div>
           <div class="min-h-[440px] bg-charcoal">
-            <iframe class="map-frame h-full min-h-[440px] w-full border-0" loading="lazy" title="Map to Piccola Venezia Restaurant" :src="mapEmbedUrl"></iframe>
+            <iframe class="map-frame h-full min-h-[440px] w-full border-0" loading="lazy" title="Carte pour rejoindre le restaurant Piccola Venezia" :src="mapEmbedUrl"></iframe>
           </div>
         </div>
       </section>
@@ -402,9 +402,9 @@
     <section x-show="activePage === 'menu'" x-transition.opacity.duration.250ms x-cloak class="bg-ivory">
       <div class="mx-auto max-w-[1440px] px-5 py-20 sm:px-7 sm:py-28 lg:px-10">
         <div class="max-w-4xl">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">From the Kitchen</p>
+          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">En cuisine</p>
           <h1 class="mt-4 font-display text-7xl leading-[.9] sm:text-[8rem]">Notre carte</h1>
-          <p class="mt-5 max-w-xl text-sm leading-7 text-muted">Italienne classics and seasonal inspirations.</p>
+          <p class="mt-5 max-w-xl text-sm leading-7 text-muted">Classiques italiens et inspirations de saison.</p>
           <p class="mt-4 max-w-2xl border-l border-gold pl-4 text-[10px] leading-5 uppercase tracking-[0.12em] text-muted">Les plats, descriptions et prix ci-dessous sont des contenus de démonstration à remplacer par les informations vérifiées du restaurant.</p>
         </div>
 
@@ -423,7 +423,7 @@
             <article class="group">
               <div class="relative aspect-[16/10] overflow-hidden bg-charcoal">
                 <img :src="item.image" :alt="item.name + ' image de démonstration'" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]" loading="lazy" />
-                <div x-show="item.popular" x-cloak class="absolute left-0 top-0 bg-burgundy px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-white">Popular</div>
+                <div x-show="item.popular" x-cloak class="absolute left-0 top-0 bg-burgundy px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.16em] text-white">Populaire</div>
               </div>
               <div class="pt-5">
                 <div class="flex items-start justify-between gap-5 border-b border-burgundy/15 pb-4">
@@ -450,12 +450,12 @@
             <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">Notre histoire</p>
             <h1 class="mt-5 max-w-4xl font-display text-7xl leading-[.86] sm:text-[8rem]">Benvenuti<br /><span class="text-burgundy">à Piccola Venezia</span></h1>
           </div>
-          <p class="max-w-md text-sm leading-7 text-muted">Piccola Venezia brings Italienne culinary inspiration to Douala, creating a welcoming dining experience shaped by the flavors, atmosphere and timeless charm associated with Italy.</p>
+          <p class="max-w-md text-sm leading-7 text-muted">Piccola Venezia apporte une inspiration culinaire italienne à Douala, pour une expérience chaleureuse façonnée par les saveurs, l'atmosphère et le charme intemporel de l'Italie.</p>
         </div>
 
         <div class="mt-16 grid gap-8 lg:grid-cols-[1.1fr_.9fr]">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="static/img/photo4jpg.jpg" alt="Italienne dining table placeholder image" class="h-full w-full object-cover" loading="lazy" />
+            <img src="static/img/photo4jpg.jpg" alt="Image de démonstration d'une table de restaurant italien" class="h-full w-full object-cover" loading="lazy" />
           </div>
           <div class="flex flex-col justify-end bg-[#E9E0D4] p-8 sm:p-12">
             <span class="font-display text-5xl text-burgundy">Cucina.</span>
@@ -471,8 +471,8 @@
     <section x-show="activePage === 'gallery'" x-transition.opacity.duration.250ms x-cloak class="bg-[#E9E0D4]">
       <div class="mx-auto max-w-[1440px] px-5 py-20 sm:px-7 sm:py-28 lg:px-10">
         <div class="max-w-4xl">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">Visual Notes</p>
-          <h1 class="mt-5 font-display text-7xl leading-[.86] sm:text-[8rem]">The Galerie</h1>
+          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">Regards sur l'ambiance</p>
+          <h1 class="mt-5 font-display text-7xl leading-[.86] sm:text-[8rem]">La Galerie</h1>
           <p class="mt-5 max-w-xl text-sm leading-7 text-muted">Images de démonstration issues des photos fournies. Les données de la galerie sont centralisées et faciles à remplacer.</p>
         </div>
 
@@ -493,8 +493,8 @@
           <div>
             <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-burgundy">Avis de nos clients</p>
             <div class="mt-6 font-display text-7xl leading-none">4.3</div>
-            <p class="mt-2 text-[10px] uppercase tracking-[0.15em] text-muted">82 Tripadvisor Avis</p>
-            <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener noreferrer" class="underline-link mt-8 inline-block text-[10px] font-semibold uppercase tracking-[0.18em] text-burgundy">View Tripadvisor Avis</a>
+            <p class="mt-2 text-[10px] uppercase tracking-[0.15em] text-muted">82 avis Tripadvisor</p>
+            <a href="https://www.tripadvisor.com/" target="_blank" rel="noopener noreferrer" class="underline-link mt-8 inline-block text-[10px] font-semibold uppercase tracking-[0.18em] text-burgundy">Voir les avis Tripadvisor</a>
           </div>
 
           <article class="border-t border-burgundy/20 pt-9">
@@ -503,7 +503,7 @@
               <span class="text-[9px] uppercase tracking-[0.14em] text-muted">4.3 / 5</span>
             </div>
             <blockquote class="mt-8 max-w-5xl font-display text-5xl leading-[1.02] sm:text-6xl lg:text-[5.7rem]">
-              “It was so good experience for Italienne food. Quiet and classical atmosphere with good wine. And kind owner...”
+              « C'était une très belle expérience autour de la cuisine italienne. Une atmosphère calme et classique, avec un bon vin. Et un propriétaire très sympathique… »
             </blockquote>
             <div class="mt-9 text-[10px] font-semibold uppercase tracking-[0.16em] text-burgundy">Kevin K. · Tripadvisor</div>
             <p class="mt-2 text-xs text-muted">Un seul avis fourni est affiché ; aucun témoignage supplémentaire n'est inventé.</p>
@@ -516,8 +516,8 @@
     <section x-show="activePage === 'reservation'" x-transition.opacity.duration.250ms x-cloak class="bg-ivory">
       <div class="mx-auto grid max-w-[1440px] gap-0 lg:grid-cols-[.7fr_1.3fr]">
         <div class="bg-charcoal px-5 py-20 text-ivory sm:px-7 sm:py-28 lg:px-10">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-gold">Réserver a table</p>
-          <h1 class="mt-5 max-w-lg font-display text-7xl leading-[.85] sm:text-[8rem]">Réserver<br />Your Table</h1>
+          <p class="text-[10px] font-semibold uppercase tracking-[0.28em] text-gold">Réserver une table</p>
+          <h1 class="mt-5 max-w-lg font-display text-7xl leading-[.85] sm:text-[8rem]">Réserver<br />Votre table</h1>
           <p class="mt-7 max-w-md text-sm leading-7 text-ivory/60">Envoyez votre demande de réservation directement à Piccola Venezia sur WhatsApp.</p>
           <div class="mt-12 border-t border-white/12 pt-6">
             <p class="text-[9px] uppercase tracking-[0.15em] text-ivory/40">Important</p>
@@ -534,7 +534,7 @@
                 <p x-show="reservationErrors.name" x-text="reservationErrors.name" x-cloak class="mt-2 text-xs text-burgundy"></p>
               </div>
               <div>
-                <label for="res-phone" class="text-[10px] font-semibold uppercase tracking-[0.16em]">Téléphone Number</label>
+                <label for="res-phone" class="text-[10px] font-semibold uppercase tracking-[0.16em]">Numéro de téléphone</label>
                 <input id="res-phone" type="tel" x-model.trim="reservation.phone" class="focus-ring mt-3 w-full border-0 border-b border-ink/18 bg-transparent px-0 py-3 text-base outline-none placeholder:text-muted/60 focus:border-burgundy" placeholder="+237 ..." autocomplete="tel" />
               </div>
               <div>
@@ -558,7 +558,7 @@
               </div>
               <div class="sm:col-span-2">
                 <label for="res-request" class="text-[10px] font-semibold uppercase tracking-[0.16em]">Demande particulière</label>
-                <textarea id="res-request" rows="4" x-model.trim="reservation.request" class="focus-ring mt-3 w-full resize-none border-b border-ink/18 bg-transparent px-0 py-3 text-base outline-none placeholder:text-muted/60 focus:border-burgundy" placeholder="Birthday, seating preference, allergies, or anything we should know"></textarea>
+                <textarea id="res-request" rows="4" x-model.trim="reservation.request" class="focus-ring mt-3 w-full resize-none border-b border-ink/18 bg-transparent px-0 py-3 text-base outline-none placeholder:text-muted/60 focus:border-burgundy" placeholder="Anniversaire, préférence de placement, allergies ou toute autre information utile"></textarea>
               </div>
             </div>
 
@@ -587,20 +587,20 @@
             <div class="mt-10 space-y-7 border-t border-burgundy/15 pt-7">
               <div>
                 <p class="text-[9px] uppercase tracking-[0.15em] text-muted">Piccola Venezia Restaurant</p>
-                <p class="mt-1 font-display text-3xl">Italienne Restaurant</p>
+                <p class="mt-1 font-display text-3xl">Restaurant italien</p>
               </div>
               <div>
                 <p class="text-[9px] uppercase tracking-[0.15em] text-muted">Téléphone & WhatsApp</p>
                 <a :href="'tel:' + restaurant.phone" class="mt-1 block font-display text-3xl hover:text-burgundy">+237 6 99 93 17 21</a>
               </div>
               <div>
-                <p class="text-[9px] uppercase tracking-[0.15em] text-muted">Address</p>
+                <p class="text-[9px] uppercase tracking-[0.15em] text-muted">Adresse</p>
                 <p class="mt-1 font-display text-3xl">Rue 1 239 Alias Rue Toyota</p>
-                <p class="mt-1 text-sm text-muted">Douala, Littoral, Cameroon</p>
+                <p class="mt-1 text-sm text-muted">Douala, Littoral, Cameroun</p>
                 <p class="mt-3 text-[10px] uppercase tracking-[0.14em] text-muted">Plus Code · <span class="font-semibold text-ink">2PG3+52M</span></p>
               </div>
               <div class="flex flex-wrap gap-3 pt-1">
-                <a :href="'tel:' + restaurant.phone" class="border border-burgundy/25 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-burgundy hover:border-burgundy">Appeler Restaurant</a>
+                <a :href="'tel:' + restaurant.phone" class="border border-burgundy/25 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-burgundy hover:border-burgundy">Appeler le restaurant</a>
                 <a :href="whatsappBaseUrl" target="_blank" rel="noopener" class="bg-burgundy px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-white hover:bg-deepburgundy">WhatsApp</a>
                 <a :href="mapsUrl" target="_blank" rel="noopener" class="border border-burgundy/25 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-burgundy hover:border-burgundy">Itinéraire</a>
               </div>
@@ -613,7 +613,7 @@
             <form @submit.prevent="submitContact" novalidate class="mt-10">
               <div class="grid gap-7 sm:grid-cols-2">
                 <div>
-                  <label for="contact-name" class="text-[10px] font-semibold uppercase tracking-[0.16em]">Name <span class="text-burgundy">*</span></label>
+                  <label for="contact-name" class="text-[10px] font-semibold uppercase tracking-[0.16em]">Nom <span class="text-burgundy">*</span></label>
                   <input id="contact-name" type="text" x-model.trim="contact.name" class="focus-ring mt-3 w-full border-0 border-b border-ink/18 bg-transparent px-0 py-3 text-base outline-none placeholder:text-muted/60 focus:border-burgundy" placeholder="Votre nom" autocomplete="name" />
                   <p x-show="contactErrors.name" x-text="contactErrors.name" x-cloak class="mt-2 text-xs text-burgundy"></p>
                 </div>
@@ -623,7 +623,7 @@
                 </div>
                 <div class="sm:col-span-2">
                   <label for="contact-message" class="text-[10px] font-semibold uppercase tracking-[0.16em]">Message <span class="text-burgundy">*</span></label>
-                  <textarea id="contact-message" rows="7" x-model.trim="contact.message" class="focus-ring mt-3 w-full resize-none border-b border-ink/18 bg-transparent px-0 py-3 text-base outline-none placeholder:text-muted/60 focus:border-burgundy" placeholder="How can we help?"></textarea>
+                  <textarea id="contact-message" rows="7" x-model.trim="contact.message" class="focus-ring mt-3 w-full resize-none border-b border-ink/18 bg-transparent px-0 py-3 text-base outline-none placeholder:text-muted/60 focus:border-burgundy" placeholder="Comment pouvons-nous vous aider ?"></textarea>
                   <p x-show="contactErrors.message" x-text="contactErrors.message" x-cloak class="mt-2 text-xs text-burgundy"></p>
                 </div>
               </div>
@@ -634,7 +634,7 @@
         </div>
       </div>
     </section>
-  </main>
+  </plats-principaux>
 
   <!-- Lightbox -->
   <div x-show="galleryOpen" x-cloak x-transition.opacity class="fixed inset-0 z-[80] bg-charcoal/96 p-4 sm:p-8" @keydown.escape.window="closeGalerie()" role="dialog" aria-modal="true" aria-label="Galerie lightbox">
@@ -643,13 +643,13 @@
         <div class="text-[9px] uppercase tracking-[0.18em]">
           <span x-text="galleryIndex + 1"></span> / <span x-text="galleryImages.length"></span>
         </div>
-        <button @click="closeGalerie()" class="icon-btn focus-ring flex h-11 w-11 items-center justify-center border border-white/20" aria-label="Close gallery">×</button>
+        <button @click="closeGalerie()" class="icon-btn focus-ring flex h-11 w-11 items-center justify-center border border-white/20" aria-label="Fermer la galerie">×</button>
       </div>
       <div class="flex min-h-0 flex-1 items-center justify-center py-5">
         <div class="relative flex max-h-full w-full items-center justify-center">
           <img :src="galleryImages[galleryIndex].src" :alt="galleryImages[galleryIndex].alt" class="max-h-[72vh] max-w-[90vw] object-contain" />
-          <button class="icon-btn" @click="previousImage()" class="focus-ring absolute left-0 sm:left-4 flex h-12 w-12 items-center justify-center border border-white/20 bg-charcoal/60 text-2xl text-ivory" aria-label="Previous image">‹</button>
-          <button class="icon-btn" @click="nextImage()" class="focus-ring absolute right-0 sm:right-4 flex h-12 w-12 items-center justify-center border border-white/20 bg-charcoal/60 text-2xl text-ivory" aria-label="Next image">›</button>
+          <button class="icon-btn" @click="previousImage()" class="focus-ring absolute left-0 sm:left-4 flex h-12 w-12 items-center justify-center border border-white/20 bg-charcoal/60 text-2xl text-ivory" aria-label="Image précédente">‹</button>
+          <button class="icon-btn" @click="nextImage()" class="focus-ring absolute right-0 sm:right-4 flex h-12 w-12 items-center justify-center border border-white/20 bg-charcoal/60 text-2xl text-ivory" aria-label="Image suivante">›</button>
         </div>
       </div>
       <div class="pb-2 text-center">
@@ -668,7 +668,7 @@
             <span class="block font-display text-4xl font-semibold tracking-[0.16em]">PICCOLA</span>
             <span class="block font-display text-4xl font-semibold tracking-[0.28em]">VENEZIA</span>
           </button>
-          <p class="mt-5 max-w-sm text-sm leading-6 text-ivory/48">Restaurant Italien · Douala, Cameroun</p>
+          <p class="mt-5 max-w-sm text-sm leading-6 text-ivory/48">Restaurant italien · Douala, Cameroun</p>
           <p class="mt-6 max-w-sm font-display text-2xl text-ivory/80">Saveurs italiennes authentiques où l'art rencontre l'excellence culinaire. </p>
         </div>
         <div>
@@ -690,7 +690,7 @@
       </div>
 
       <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-[9px] uppercase tracking-[0.13em] text-ivory/38 sm:flex-row sm:items-center sm:justify-between">
-        <span>© 2026 Piccola Venezia Restaurant. All rights reserved.</span>
+        <span>© 2026 Piccola Venezia Restaurant. Tous droits réservés.</span>
         <span>Confidentialité · Site statique</span>
       </div>
     </div>
@@ -729,20 +729,20 @@
           cuisine: 'Italienne',
           phone: '+237699931721',
           whatsapp: '237699931721',
-          address: 'Rue 1 239 Alias Rue Toyota, Douala, Littoral, Cameroon',
+          address: 'Rue 1 239 Alias Rue Toyota, Douala, Littoral, Cameroun',
           plusCode: '2PG3+52M',
           latitude: 4.025449752807617,
           longitude: 9.702556610107422,
           rating: 4.3,
           reviewCount: 82,
           hours: {
-            monday: '12:00 – 14:30, 18:30 - 23:00',
-            tuesday: '12:00 – 14:30, 18:30 - 23:00',
-            wednesday: '12:00 – 14:30, 18:30 - 23:00',
-            thursday: '12:00 – 14:30, 18:30 - 23:00',
-            friday: '12:00 – 14:30, 18:30 - 23:00',
-            saturday: '12:00 – 14:30, 18:30 - 23:00',
-            sunday: '12:00 – 14:30, 18:30 - 23:00'
+            monday: '12:00 – 14:30, 18:30 – 23:00',
+            tuesday: '12:00 – 14:30, 18:30 – 23:00',
+            wednesday: '12:00 – 14:30, 18:30 – 23:00',
+            thursday: '12:00 – 14:30, 18:30 – 23:00',
+            friday: '12:00 – 14:30, 18:30 – 23:00',
+            saturday: '12:00 – 14:30, 18:30 – 23:00',
+            sunday: '12:00 – 14:30, 18:30 – 23:00'
           }
         },
 
@@ -757,25 +757,25 @@
         ],
 
         categories: [
-          { id: 'all', label: 'All' },
+          { id: 'all', label: 'Tous' },
           { id: 'antipasti', label: 'Antipasti' },
-          { id: 'pasta', label: 'Pasta' },
+          { id: 'pâtes', label: 'Pasta' },
           { id: 'pizza', label: 'Pizza' },
-          { id: 'main', label: 'Main Courses' },
+          { id: 'plats-principaux', label: 'Plats principaux' },
           { id: 'desserts', label: 'Desserts' },
-          { id: 'drinks', label: 'Drinks' }
+          { id: 'boissons', label: 'Boissons' }
         ],
 
-        // REPLACE SAMPLE MENU DATA WITH VERIFIED RESTAURANT MENU.
+        // REMPLACER LES DONNÉES DE DÉMONSTRATION PAR LA CARTE VÉRIFIÉE DU RESTAURANT.
         menuItems: [
-          { name: 'Burrata & Pomodoro', description: 'Creamy burrata, ripe tomatoes, basil and a delicate olive-oil finish.', category: 'antipasti', price: 'SAMPLE', image: 'static/img/photo7jpg.jpg', popular: true },
-          { name: 'Tagliatelle al Pomodoro', description: 'Fresh ribbon pasta with bright tomato sugo, basil and parmesan.', category: 'pasta', price: 'SAMPLE', image: 'static/img/photo2jpg.jpg', popular: true },
-          { name: 'Spaghetti Aglio e Olio', description: 'Spaghetti, garlic, extra-virgin olive oil, parsley and a gentle chili finish.', category: 'pasta', price: 'SAMPLE', image: 'static/img/photo4jpg.jpg', popular: false },
-          { name: 'Pizza Margherita', description: 'A timeless combination of tomato, mozzarella and basil.', category: 'pizza', price: 'SAMPLE', image: 'static/img/20160605-202258-largejpg.jpg', popular: true },
-          { name: 'Risotto ai Funghi', description: 'Creamy risotto with mushrooms, herbs and parmesan.', category: 'main', price: 'SAMPLE', image: 'static/img/photo0jpg (1).jpg', popular: false },
-          { name: 'Tiramisù', description: 'Coffee, mascarpone and cocoa layered in a classic Italienne dessert.', category: 'desserts', price: 'SAMPLE', image: 'static/img/photo4jpg.jpg', popular: true },
-          { name: 'Affogato', description: 'Vanilla gelato with a shot of espresso.', category: 'desserts', price: 'SAMPLE', image: 'static/img/photo7jpg.jpg', popular: false },
-          { name: 'Espresso', description: 'A concise Italienne coffee finish.', category: 'drinks', price: 'SAMPLE', image: 'static/img/photo2jpg.jpg', popular: false }
+          { name: 'Burrata & Pomodoro', description: "Burrata crémeuse, tomates mûres, basilic et délicate finition à l'huile d'olive.", category: 'antipasti', price: 'DÉMO', image: 'static/img/photo7jpg.jpg', popular: true },
+          { name: 'Tagliatelle al Pomodoro', description: 'Pâtes fraîches en rubans, sauce tomate parfumée, basilic et parmesan.', category: 'pâtes', price: 'DÉMO', image: 'static/img/photo2jpg.jpg', popular: true },
+          { name: 'Spaghetti Aglio e Olio', description: "Spaghetti, ail, huile d'olive extra vierge, persil et une légère touche de piment.", category: 'pâtes', price: 'DÉMO', image: 'static/img/photo4jpg.jpg', popular: false },
+          { name: 'Pizza Margherita', description: 'Une association intemporelle de tomate, mozzarella et basilic.', category: 'pizza', price: 'DÉMO', image: 'static/img/20160605-202258-largejpg.jpg', popular: true },
+          { name: 'Risotto ai Funghi', description: 'Risotto crémeux aux champignons, herbes et parmesan.', category: 'plats-principaux', price: 'DÉMO', image: 'static/img/photo0jpg (1).jpg', popular: false },
+          { name: 'Tiramisù', description: 'Café, mascarpone et cacao en couches dans un grand classique de la pâtisserie italienne.', category: 'desserts', price: 'DÉMO', image: 'static/img/photo4jpg.jpg', popular: true },
+          { name: 'Affogato', description: "Glace à la vanille accompagnée d'un espresso.", category: 'desserts', price: 'DÉMO', image: 'static/img/photo7jpg.jpg', popular: false },
+          { name: 'Espresso', description: "Une touche finale italienne autour d'un espresso.", category: 'boissons', price: 'DÉMO', image: 'static/img/photo2jpg.jpg', popular: false }
         ],
 
         galleryImages: [
@@ -882,22 +882,22 @@
           let valid = true;
 
           if (!this.reservation.name) {
-            this.reservationErrors.name = 'Please enter your name.';
+            this.reservationErrors.name = 'Veuillez saisir votre nom.';
             valid = false;
           }
           if (!this.reservation.date) {
-            this.reservationErrors.date = 'Please choose a date.';
+            this.reservationErrors.date = 'Veuillez choisir une date.';
             valid = false;
           } else if (this.reservation.date < this.today) {
-            this.reservationErrors.date = 'Please choose a future date.';
+            this.reservationErrors.date = 'Veuillez choisir une date future.';
             valid = false;
           }
           if (!this.reservation.time) {
-            this.reservationErrors.time = 'Please choose a time.';
+            this.reservationErrors.time = 'Veuillez choisir une heure.';
             valid = false;
           }
           if (!this.reservation.guests || Number(this.reservation.guests) < 1) {
-            this.reservationErrors.guests = 'Please choose the number of guests.';
+            this.reservationErrors.guests = 'Veuillez choisir le nombre de personnes.';
             valid = false;
           }
           return valid;
@@ -910,14 +910,14 @@
         },
 
         generateRéservationMessage() {
-          const phone = this.reservation.phone || 'Not provided';
+          const phone = this.reservation.phone || 'Non renseigné';
           const request = this.reservation.request || 'None';
           return [
             'Bonjour Piccola Venezia 👋',
             '',
             'Je souhaite demander une réservation de table.',
             '',
-            `Name: ${this.reservation.name}`,
+            `Nom : ${this.reservation.name}`,
             `Date: ${this.formatRéservationDate(this.reservation.date)}`,
             `Heure: ${this.reservation.time}`,
             `Guests: ${this.reservation.guests}`,
@@ -945,11 +945,11 @@
           this.clearContactErrors();
           let valid = true;
           if (!this.contact.name) {
-            this.contactErrors.name = 'Please enter your name.';
+            this.contactErrors.name = 'Veuillez saisir votre nom.';
             valid = false;
           }
           if (!this.contact.message) {
-            this.contactErrors.message = 'Please enter a message.';
+            this.contactErrors.message = 'Veuillez saisir un message.';
             valid = false;
           }
           return valid;
@@ -960,9 +960,9 @@
             'Bonjour Piccola Venezia 👋',
             '',
             `Je m'appelle ${this.contact.name}.`,
-            `Téléphone: ${this.contact.phone || 'Not provided'}`,
+            `Téléphone: ${this.contact.phone || 'Non renseigné'}`,
             '',
-            `Message: ${this.contact.message}`,
+            `Message : ${this.contact.message}`,
             '',
             'Merci.'
           ].join('\n');
